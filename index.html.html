@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Feedback Form</h1>
+        <p>Please select your role and provide feedback.</p>
+
+        <form id="feedbackForm">
+            <div class="role-selection">
+                <label for="role">Select Role:</label>
+                <select id="role" required>
+                    <option value="" disabled selected>Select Role</option>
+                    <option value="student">Student</option>
+                    <option value="teacher">Teacher</option>
+                    <option value="parent">Parent</option>
+                </select>
+            </div>
+
+            <div id="studentFeedback" class="feedback-section">
+                <h2>Student Feedback</h2>
+                <label for="marks">Marks Obtained:</label>
+                <input type="number" id="marks" placeholder="Enter Marks" min="0" max="100">
+                
+                <label for="behavior">Behavior:</label>
+                <textarea id="behavior" placeholder="Enter any comments on behavior..."></textarea>
+            </div>
+
+            <div id="teacherFeedback" class="feedback-section">
+                <h2>Teacher Feedback</h2>
+                <label for="teaching">Teaching Style:</label>
+                <textarea id="teaching" placeholder="Enter comments on teaching style..."></textarea>
+                
+                <label for="improvements">Things to Improve:</label>
+                <textarea id="improvements" placeholder="Enter suggestions for improvement..."></textarea>
+            </div>
+
+            <div id="parentFeedback" class="feedback-section">
+                <h2>Parent Feedback</h2>
+                <label for="childProgress">Child's Progress:</label>
+                <textarea id="childProgress" placeholder="Enter comments on child's progress..."></textarea>
+                
+                <label for="behaviorIssues">Behavior Issues:</label>
+                <textarea id="behaviorIssues" placeholder="Enter any behavior issues..."></textarea>
+            </div>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+
+        <div id="result" class="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
